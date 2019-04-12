@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Chata</string>
+    <string name="button_send">Send</string>
+    <string name="edit_message">Message</string>
+    <string name="title_activity_oswietlenie_parter_image">OswietlenieParterImageActivity</string>
+    <string name="parter_host">192.168.1.25</string>
+    <string name="poddasze_host">192.168.1.26</string>
+</resources>
