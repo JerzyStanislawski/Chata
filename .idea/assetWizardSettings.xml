@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="101" />
+                                                <entry key="scalingPercent" value="96" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,15 +33,54 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="D:\ina_r1.jpg" />
-                                      <entry key="foregroundLayerName" value="ic_launcher_foreground" />
+                                      <entry key="foregroundImage" value="D:\house.png" />
+                                      <entry key="foregroundLayerName" value="houseIcon" />
                                       <entry key="outputName" value="parterImage" />
                                     </map>
                                   </option>
                                 </PersistentState>
                               </value>
                             </entry>
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
+          </value>
+        </entry>
+        <entry key="vectorWizard">
+          <value>
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="vectorAssetStep">
+                    <value>
+                      <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="clipartAsset">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_delete_black_24dp.xml" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                        <option name="values">
+                          <map>
+                            <entry key="color" value="ffffff" />
+                            <entry key="outputName" value="ic_delete_white_24dp" />
+                            <entry key="sourceFile" value="C:\Users\stani_000" />
                           </map>
                         </option>
                       </PersistentState>

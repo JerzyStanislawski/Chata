@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"/>
 
     <Button
         android:id="@+id/button_osw_parter"
@@ -153,20 +158,4 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/buttonRoletyPoddaszeUp"
         app:layout_constraintTop_toBottomOf="@id/buttonRoletyParterDown" />
-
-    <Button
-        android:id="@+id/button_osw_parter_image"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="115dp"
-        android:layout_marginLeft="75dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="150dp"
-        android:onClick="navigateOswietlenieParterImage"
-        android:text="PARTER"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button_rolety_poddasze" />
 </android.support.constraint.ConstraintLayout>

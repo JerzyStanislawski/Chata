@@ -7,11 +7,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_house"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_house"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,27 +20,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OswietlenieParterActivity">
+        <activity android:name=".LightsBasementActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.chata.chata.MainActivity" />
         </activity>
-        <activity android:name=".OswietleniePoddaszeActivity">
+        <activity android:name=".LightsAtticActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.chata.chata.MainActivity" />
         </activity>
-        <activity android:name=".ParterImageActivity">
+        <activity android:name=".BlindsBasementActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.chata.chata.MainActivity" />
         </activity>
-        <activity android:name=".RoletyParterActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.chata.chata.MainActivity" />
-        </activity>
-        <activity android:name=".RoletyPoddaszeActivity">
+        <activity android:name=".BlindsAtticActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.chata.chata.MainActivity" />
@@ -48,6 +44,22 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
+        <activity android:name=".scheduling.ScheduleActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chata.chata.MainActivity" />
+        </activity>
+        <activity android:name=".scheduling.ScheduleEntityActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chata.chata.scheduling.ScheduleActivity" />
+        </activity>
+        <activity android:name=".SettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chata.chata.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

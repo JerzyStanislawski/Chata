@@ -1,3 +1,4 @@
+/*
 package com.chata.chata;
 
 import android.annotation.SuppressLint;
@@ -6,7 +7,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -73,7 +73,7 @@ public class ParterImageActivity extends BasePageActivity  implements OnClickabl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_oswietlenie_parter_image);
+        setContentView(R.layout.activity_lights_basement_image);
 
         //mainLayout = (RelativeLayout) findViewById(R.id.)
         image = findViewById(R.id.parterImage);
@@ -184,13 +184,13 @@ public class ParterImageActivity extends BasePageActivity  implements OnClickabl
     private List<ClickableArea> getDragableAreas() {
         List<ClickableArea> dragableAreas = new ArrayList<>();
 
-        dragableAreas.add(new ClickableArea(440 , 146 , 281 , 37 , scale, new Roleta("salon2")));
-        dragableAreas.add(new ClickableArea(726 , 187 , 17 , 200 , scale, new Roleta("salon1")));
-        dragableAreas.add(new ClickableArea(841 , 407 , 156 , 28 , scale, new Roleta("gabinet")));
-        dragableAreas.add(new ClickableArea(155 , 630 , 41 , 200 , scale, new Roleta("jadalnia")));
-        dragableAreas.add(new ClickableArea(193 , 1308 , 215 , 48 , scale, new Roleta("kuchnia")));
-        dragableAreas.add(new ClickableArea(522 , 1501 , 63 , 30 , scale, new Roleta("garderoba")));
-        dragableAreas.add(new ClickableArea(744 , 1493 , 59 , 40 , scale, new Roleta("kotlownia")));
+        dragableAreas.add(new ClickableArea(440 , 146 , 281 , 37 , scale, new Blind("salon2")));
+        dragableAreas.add(new ClickableArea(726 , 187 , 17 , 200 , scale, new Blind("salon1")));
+        dragableAreas.add(new ClickableArea(841 , 407 , 156 , 28 , scale, new Blind("gabinet")));
+        dragableAreas.add(new ClickableArea(155 , 630 , 41 , 200 , scale, new Blind("jadalnia")));
+        dragableAreas.add(new ClickableArea(193 , 1308 , 215 , 48 , scale, new Blind("kuchnia")));
+        dragableAreas.add(new ClickableArea(522 , 1501 , 63 , 30 , scale, new Blind("garderoba")));
+        dragableAreas.add(new ClickableArea(744 , 1493 , 59 , 40 , scale, new Blind("kotlownia")));
 
         return dragableAreas;
     }
@@ -239,8 +239,8 @@ public class ParterImageActivity extends BasePageActivity  implements OnClickabl
 
     private void UpdateAreas(Map<Integer, Boolean> state) {
         for (ClickableArea<Light> area : clickableAreas) {
-            boolean isOn = state.get(area.getItem().Output);
-            area.getItem().State = isOn;
+            boolean isOn = state.get(area.getItem().getOutput());
+            area.getItem().setState(isOn);
         }
     }
 
@@ -266,9 +266,9 @@ public class ParterImageActivity extends BasePageActivity  implements OnClickabl
     public void onClickableAreaTouched(Object item, int x, int y, int width, int height) {
         if (item instanceof Light) {
             Light light = (Light) item;
-            light.State = !light.State;
+            light.setState(!light.isState());
 
-            utility.Post("http://" + getLightHost() + "/impulsOswietlenie", light.Name + "=" + Boolean.toString(light.State));
+            utility.Post("http://" + getLightHost() + "/impulsOswietlenie", light.getName() + "=" + Boolean.toString(light.isState()));
 
             Paint paint = new Paint();
             paint.setColor(Color.GREEN);
@@ -291,8 +291,8 @@ public class ParterImageActivity extends BasePageActivity  implements OnClickabl
 
    // @Override
     public boolean onClickableAreaDragged(Object item, Direction direction) {
-        if (item instanceof Roleta) {
-            String roleta = ((Roleta)item).getName();
+        if (item instanceof Blind) {
+            String roleta = ((Blind)item).getName();
             utility.Post("http://" + getRoletyHost() + "/impulsRolety", roleta.concat("_").concat(direction.toString().toLowerCase()));
             Toast.makeText(image.getContext(), roleta.concat("_").concat(direction.toString().toLowerCase()), Toast.LENGTH_SHORT).show();
             return true;
@@ -300,3 +300,4 @@ public class ParterImageActivity extends BasePageActivity  implements OnClickabl
         return false;
     }
 }
+*/
